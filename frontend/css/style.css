@@ -1,0 +1,557 @@
+/* ===== HERO SECTION FIX ===== */
+
+.hero {
+    min-height: 480px;
+    padding: 75px 8% 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 850px;
+    margin: 0 auto 28px;
+}
+
+/* ===== HERO BUTTONS FIX ===== */
+
+.hero a {
+    display: inline-block;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+.hero a:hover,
+.nav-button:hover {
+    background-color: #6d5be8;
+    transform: translateY(-2px);
+}
+
+/* ===== STATISTICS FIX ===== */
+
+/* Adjust these selectors if your HTML uses different class names. */
+.hero .stats,
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 950px;
+    margin: 45px auto 0;
+}
+
+.stat-card {
+    flex: 1 1 200px;
+    padding: 24px 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    margin: 0;
+}
+
+/* ===== CAREER JOURNEY FIX ===== */
+
+#journey {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+#journey h2 {
+    font-size: 30px;
+    margin: 15px 0 35px;
+}
+
+#journey .journey-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.journey-card {
+    padding: 28px 22px;
+    background: #121a2e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    text-align: left;
+}
+
+.journey-card p {
+    color: #a7b0c5;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    #journey .journey-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+body {
+    background-color: #0b1020 !important;
+    color: #f5f7ff !important;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #121a2e;
+    padding: 20px;
+}
+
+.hero h1 {
+    color: #8b7cff;
+}
+
+/* Navbar Fix */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #121a2e;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #8b7cff;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar nav a:hover {
+    color: #8b7cff;
+}
+
+.nav-button {
+    background: #8b7cff;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #7564ed;
+}
+
+/* Hero Section Buttons */
+.hero a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px;
+    border-radius: 8px;
+    background: #8b7cff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.hero a:hover {
+    background: #7564ed;
+    transform: translateY(-2px);
+}
+
+/* Hero Statistics Section */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-stats > div {
+    flex: 1;
+    max-width: 220px;
+    min-width: 160px;
+    padding: 25px 20px;
+    background: #121a2e;
+    border: 1px solid #263451;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-stats > div:hover {
+    transform: translateY(-5px);
+    border-color: #8b7cff;
+}
+
+.hero-stats h3 {
+    color: #8b7cff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-stats p {
+    color: #a7b0c5;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-stats > div {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Career Journey Section */
+.journey-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.journey-steps > div {
+    background: #111a2e;
+    border: 1px solid #263451;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.journey-steps > div:hover {
+    transform: translateY(-6px);
+    border-color: #8b7cff;
+}
+
+.journey-steps h3 {
+    color: #ffffff;
+    margin: 16px 0 10px;
+}
+
+.journey-steps p {
+    color: #aab8d0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .journey-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Career Journey Steps */
+.journey-step {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #111a2e;
+    border: 1px solid #263451;
+    border-radius: 14px;
+    padding: 24px;
+    margin: 18px auto;
+    max-width: 600px;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.journey-step:hover {
+    transform: translateY(-5px);
+    border-color: #8b7cff;
+}
+
+.journey-step > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #8b7cff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.journey-step h4 {
+    color: #ffffff;
+    margin: 0 0 8px;
+}
+
+.journey-step p {
+    color: #aab8d0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .journey-step {
+        padding: 18px;
+        gap: 12px;
+    }
+}
+
+/* Add space before Career Journey */
+.hero-stats + .hero-card {
+    margin-top: 50px;
+}
+
+.hero-card .card-label {
+    margin-bottom: 24px;
+}
+
+.hero-card > h2 {
+    margin-bottom: 30px;
+}
+
+/* Fix spacing in Career Journey section */
+.hero-card {
+    margin-top: 60px !important;
+}
+
+.hero-card .card-label {
+    margin-bottom: 25px !important;
+}
+
+.hero-card > h2 {
+    margin-top: 20px !important;
+    margin-bottom: 35px !important;
+}
+
+/* =========================
+   EXPLORE CAREERS SECTION
+========================= */
+
+.careers {
+    padding: 90px 8%;
+    background: #0b1020;
+    color: #ffffff;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.section-label {
+    color: #8b7cff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 34px;
+    margin-bottom: 16px;
+}
+
+.section-description {
+    color: #aebbd3;
+    line-height: 1.7;
+}
+
+/* Search Bar */
+
+.career-search {
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+.career-search input {
+    width: 100%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    background: #121b30;
+    border: 1px solid #293957;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.career-search input:focus {
+    border-color: #8b7cff;
+}
+
+.career-search input::placeholder {
+    color: #8997b0;
+}
+
+/* Category Filters */
+
+.career-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: #121b30;
+    color: #c3cce0;
+    border: 1px solid #293957;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #8b7cff;
+    color: #ffffff;
+    border-color: #8b7cff;
+}
+
+/* Career Cards Grid */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Career Card */
+
+.career-card {
+    background: #121b30;
+    border: 1px solid #293957;
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.career-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b7cff;
+}
+
+.career-icon {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.career-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.career-card p {
+    color: #aebbd3;
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 72px;
+}
+
+.career-skills {
+    color: #a697ff;
+    font-size: 12px;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.career-link {
+    display: inline-block;
+    color: #a697ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.career-link:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .career-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .careers {
+        padding: 65px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 27px;
+    }
+
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .career-card p {
+        min-height: auto;
+    }
+}
