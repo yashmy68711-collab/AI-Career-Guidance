@@ -1,15 +1,277 @@
 "use strict";
 
-// ============================================
-// CAREERPATHAI
-// Career Search, Filters, Details and Assessment
-// ============================================
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
+    // ============================================================
+    // 1. CAREER DATABASE
+    // ============================================================
 
-    // ========================================
-    // 1. GET HTML ELEMENTS
-    // ========================================
+    const careers = {
+        software: {
+            id: "software",
+            title: "Software Developer",
+            category: "technology",
+
+            description:
+                "Build applications, websites, and software solutions to solve real-world problems.",
+
+            skills: [
+                "Python or Java",
+                "Data Structures and Algorithms",
+                "Object-Oriented Programming",
+                "Git and GitHub",
+                "Problem Solving"
+            ],
+
+            roadmap: [
+                "Learn a programming language such as Python or Java.",
+                "Master Data Structures and Algorithms.",
+                "Learn Object-Oriented Programming.",
+                "Build projects and upload them to GitHub.",
+                "Learn databases, APIs, and software development tools.",
+                "Apply for internships and entry-level software positions."
+            ],
+
+            resources: [
+                {
+                    name: "freeCodeCamp",
+                    url: "https://www.freecodecamp.org/"
+                },
+                {
+                    name: "GitHub",
+                    url: "https://github.com/"
+                },
+                {
+                    name: "LeetCode",
+                    url: "https://leetcode.com/"
+                }
+            ]
+        },
+
+        robotics: {
+            id: "robotics",
+            title: "AI & Robotics Engineer",
+            category: "ai",
+
+            description:
+                "Develop intelligent robots, autonomous systems, and AI-powered machines.",
+
+            skills: [
+                "Python",
+                "C++",
+                "ROS 2",
+                "Robot Kinematics",
+                "Computer Vision",
+                "Machine Learning"
+            ],
+
+            roadmap: [
+                "Learn Python and C++ programming.",
+                "Strengthen mathematics, linear algebra, and basic physics.",
+                "Study robot joints, degrees of freedom, and kinematics.",
+                "Learn ROS 2 and robot communication.",
+                "Practice robot simulation using Gazebo or Webots.",
+                "Learn computer vision and machine learning.",
+                "Build robotics projects and document them on GitHub."
+            ],
+
+            resources: [
+                {
+                    name: "ROS 2 Documentation",
+                    url: "https://docs.ros.org/"
+                },
+                {
+                    name: "Gazebo Documentation",
+                    url: "https://gazebosim.org/docs"
+                },
+                {
+                    name: "OpenCV Documentation",
+                    url: "https://docs.opencv.org/"
+                },
+                {
+                    name: "Kaggle",
+                    url: "https://www.kaggle.com/"
+                }
+            ]
+        },
+
+        data: {
+            id: "data",
+            title: "Data Scientist",
+            category: "data",
+
+            description:
+                "Analyze data and build predictive models to discover meaningful patterns.",
+
+            skills: [
+                "Python",
+                "SQL",
+                "Statistics",
+                "NumPy",
+                "Pandas",
+                "Machine Learning"
+            ],
+
+            roadmap: [
+                "Learn Python programming.",
+                "Study statistics and probability.",
+                "Learn NumPy and Pandas.",
+                "Practice data cleaning and exploratory data analysis.",
+                "Learn SQL and data visualization.",
+                "Study machine learning fundamentals.",
+                "Build data analysis and prediction projects."
+            ],
+
+            resources: [
+                {
+                    name: "Kaggle",
+                    url: "https://www.kaggle.com/"
+                },
+                {
+                    name: "Pandas Documentation",
+                    url: "https://pandas.pydata.org/docs/"
+                },
+                {
+                    name: "Scikit-learn Documentation",
+                    url: "https://scikit-learn.org/stable/"
+                }
+            ]
+        },
+
+        cybersecurity: {
+            id: "cybersecurity",
+            title: "Cybersecurity Engineer",
+            category: "technology",
+
+            description:
+                "Protect computer systems, networks, and applications against cyber threats.",
+
+            skills: [
+                "Computer Networks",
+                "Linux",
+                "Python",
+                "Operating Systems",
+                "Web Security",
+                "Security Fundamentals"
+            ],
+
+            roadmap: [
+                "Understand computer hardware and operating systems.",
+                "Learn Linux and command-line tools.",
+                "Study networking fundamentals.",
+                "Learn Python scripting.",
+                "Understand web security and common vulnerabilities.",
+                "Practice in legal cybersecurity labs.",
+                "Build defensive security projects and document your learning."
+            ],
+
+            resources: [
+                {
+                    name: "Cisco Networking Academy",
+                    url: "https://www.netacad.com/"
+                },
+                {
+                    name: "TryHackMe",
+                    url: "https://tryhackme.com/"
+                },
+                {
+                    name: "OWASP",
+                    url: "https://owasp.org/"
+                }
+            ]
+        },
+
+        web: {
+            id: "web",
+            title: "Web Developer",
+            category: "technology",
+
+            description:
+                "Design and develop interactive websites and web applications.",
+
+            skills: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Responsive Web Design",
+                "Git and GitHub",
+                "APIs"
+            ],
+
+            roadmap: [
+                "Learn HTML and semantic page structure.",
+                "Learn CSS, layouts, and responsive design.",
+                "Master JavaScript fundamentals.",
+                "Build interactive websites.",
+                "Learn Git and GitHub.",
+                "Learn APIs and a frontend framework.",
+                "Build and deploy portfolio projects."
+            ],
+
+            resources: [
+                {
+                    name: "MDN Web Docs",
+                    url: "https://developer.mozilla.org/"
+                },
+                {
+                    name: "freeCodeCamp",
+                    url: "https://www.freecodecamp.org/"
+                },
+                {
+                    name: "GitHub",
+                    url: "https://github.com/"
+                }
+            ]
+        },
+
+        entrepreneur: {
+            id: "entrepreneur",
+            title: "Entrepreneur",
+            category: "business",
+
+            description:
+                "Turn ideas into products or services by solving problems and building businesses.",
+
+            skills: [
+                "Communication",
+                "Problem Solving",
+                "Business Planning",
+                "Market Research",
+                "Financial Basics",
+                "Leadership"
+            ],
+
+            roadmap: [
+                "Identify a problem that people need solved.",
+                "Research the market and potential customers.",
+                "Develop a business idea and value proposition.",
+                "Create a simple prototype or minimum viable product.",
+                "Collect feedback and improve the product.",
+                "Learn basic finance, marketing, and business operations.",
+                "Develop a sustainable business plan."
+            ],
+
+            resources: [
+                {
+                    name: "Y Combinator Startup Library",
+                    url: "https://www.ycombinator.com/library"
+                },
+                {
+                    name: "Startup India",
+                    url: "https://www.startupindia.gov.in/"
+                },
+                {
+                    name: "Harvard Business Review",
+                    url: "https://hbr.org/"
+                }
+            ]
+        }
+    };
+
+
+    // ============================================================
+    // 2. HTML ELEMENTS
+    // ============================================================
 
     const careerSearch = document.getElementById("careerSearch");
 
@@ -17,483 +279,208 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const careerCards = document.querySelectorAll(".career-card");
 
-    const searchMessage = document.getElementById("searchMessage");
+    const noCareersMessage =
+        document.getElementById("noCareersMessage");
 
-    const noCareersMessage = document.getElementById(
-        "noCareersMessage"
-    );
+    const searchMessage =
+        document.getElementById("searchMessage");
 
-    const careerGrid = document.querySelector(".career-grid");
+    const careerDetails =
+        document.getElementById("career-details");
 
-    const careerFilters = document.querySelector(".career-filters");
+    const backToCareers =
+        document.getElementById("backToCareers");
 
-    const careerSearchContainer = document.querySelector(
-        ".career-search"
-    );
+    const detailTitle =
+        document.getElementById("detailTitle");
 
-    const sectionHeader = document.querySelector(
-        ".careers .section-header"
-    );
+    const detailDescription =
+        document.getElementById("detailDescription");
 
-    const careerDetails = document.getElementById("career-details");
+    const detailSkills =
+        document.getElementById("detailSkills");
 
-    const backButton = document.getElementById("backToCareers");
+    const detailRoadmap =
+        document.getElementById("detailRoadmap");
 
-    const detailTitle = document.getElementById("detailTitle");
+    const detailResources =
+        document.getElementById("detailResources");
 
-    const detailDescription = document.getElementById(
-        "detailDescription"
-    );
 
-    const detailSkills = document.getElementById("detailSkills");
-
-    const detailRoadmap = document.getElementById("detailRoadmap");
-
-    const detailResources = document.getElementById("detailResources");
-
-    const assessmentForm = document.getElementById("assessmentForm");
-
-    const assessmentResult = document.getElementById(
-        "assessmentResult"
-    );
-
-    const assessmentMessage = document.getElementById(
-        "assessmentMessage"
-    );
-
-    const viewRecommendedCareer = document.getElementById(
-        "viewRecommendedCareer"
-    );
-
-
-    // ========================================
-    // 2. CAREER DATA
-    // ========================================
-
-    const careers = {
-
-        software: {
-
-            title: "Software Developer",
-
-            category: "technology",
-
-            description:
-                "Software developers design, build, test, and maintain applications that solve real-world problems.",
-
-            skills: [
-                "Python or Java",
-                "Data Structures and Algorithms",
-                "Object-Oriented Programming",
-                "Git and GitHub",
-                "Database fundamentals",
-                "Problem-solving"
-            ],
-
-            roadmap: [
-                "Learn programming fundamentals.",
-                "Master Object-Oriented Programming.",
-                "Study Data Structures and Algorithms.",
-                "Learn databases, Git, and software development tools.",
-                "Build practical projects and publish them on GitHub.",
-                "Prepare for internships and technical interviews."
-            ],
-
-            resources: [
-                "Python documentation — https://docs.python.org/3/",
-                "Git documentation — https://git-scm.com/doc",
-                "Coding practice — https://leetcode.com/"
-            ]
-
-        },
-
-
-        robotics: {
-
-            title: "AI & Robotics Engineer",
-
-            category: "ai",
-
-            description:
-                "AI and robotics engineers develop intelligent robots, autonomous systems, and machines that interact with the real world.",
-
-            skills: [
-                "Python and C++",
-                "Linear algebra and calculus",
-                "Robot kinematics",
-                "ROS 2",
-                "Computer vision",
-                "Machine learning",
-                "Linux and simulation tools"
-            ],
-
-            roadmap: [
-                "Learn Python and C++ programming.",
-                "Study linear algebra, calculus, and robotics kinematics.",
-                "Learn ROS 2 and create basic robot nodes.",
-                "Explore robot simulation and autonomous navigation.",
-                "Study computer vision and machine learning.",
-                "Build robotics projects and document them on GitHub."
-            ],
-
-            resources: [
-                "ROS 2 documentation — https://docs.ros.org/",
-                "OpenCV documentation — https://docs.opencv.org/",
-                "Python documentation — https://docs.python.org/3/"
-            ]
-
-        },
-
-
-        data: {
-
-            title: "Data Scientist",
-
-            category: "data",
-
-            description:
-                "Data scientists analyze datasets, identify patterns, and develop predictive models to support informed decisions.",
-
-            skills: [
-                "Python programming",
-                "NumPy and Pandas",
-                "Statistics and probability",
-                "SQL",
-                "Data visualization",
-                "Machine learning"
-            ],
-
-            roadmap: [
-                "Learn Python programming.",
-                "Study statistics and probability.",
-                "Practice data cleaning and analysis.",
-                "Learn SQL and data visualization.",
-                "Study machine learning fundamentals.",
-                "Build data analysis and prediction projects."
-            ],
-
-            resources: [
-                "Pandas — https://pandas.pydata.org/",
-                "Scikit-learn — https://scikit-learn.org/",
-                "SQLBolt — https://sqlbolt.com/"
-            ]
-
-        },
-
-
-        cybersecurity: {
-
-            title: "Cybersecurity Engineer",
-
-            category: "technology",
-
-            description:
-                "Cybersecurity engineers help protect computer systems, applications, and networks from security threats.",
-
-            skills: [
-                "Computer networking",
-                "Linux",
-                "Operating systems",
-                "Python scripting",
-                "Security fundamentals",
-                "Ethical testing practices"
-            ],
-
-            roadmap: [
-                "Learn networking fundamentals.",
-                "Understand Linux and operating systems.",
-                "Study security principles and common vulnerabilities.",
-                "Practice using authorized cybersecurity labs.",
-                "Learn security monitoring and defensive tools.",
-                "Create a portfolio of security projects."
-            ],
-
-            resources: [
-                "Ubuntu tutorials — https://ubuntu.com/tutorials",
-                "OWASP — https://owasp.org/",
-                "Cisco Networking Academy — https://www.netacad.com/"
-            ]
-
-        },
-
-
-        web: {
-
-            title: "Web Developer",
-
-            category: "technology",
-
-            description:
-                "Web developers create interactive websites and applications using frontend and backend technologies.",
-
-            skills: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Responsive web design",
-                "Git and GitHub",
-                "Backend development",
-                "Database fundamentals"
-            ],
-
-            roadmap: [
-                "Master HTML and CSS.",
-                "Learn JavaScript fundamentals.",
-                "Practice DOM manipulation and browser events.",
-                "Build responsive websites.",
-                "Learn backend development and databases.",
-                "Deploy projects and create a portfolio."
-            ],
-
-            resources: [
-                "MDN Web Docs — https://developer.mozilla.org/",
-                "JavaScript Guide — https://javascript.info/",
-                "GitHub — https://github.com/"
-            ]
-
-        },
-
-
-        entrepreneur: {
-
-            title: "Entrepreneur",
-
-            category: "business",
-
-            description:
-                "Entrepreneurs identify problems, develop solutions, and build businesses around products or services.",
-
-            skills: [
-                "Problem-solving",
-                "Business planning",
-                "Communication",
-                "Financial fundamentals",
-                "Market research",
-                "Leadership"
-            ],
-
-            roadmap: [
-                "Identify a real-world problem.",
-                "Research potential customers and competitors.",
-                "Develop a business model.",
-                "Create and test a minimum viable product.",
-                "Collect feedback and improve the product.",
-                "Develop a sustainable business strategy."
-            ],
-
-            resources: [
-                "Startup India — https://www.startupindia.gov.in/",
-                "Y Combinator resources — https://www.ycombinator.com/resources"
-            ]
-
-        }
-
-    };
-
-
-    // ========================================
-    // 3. CAREER SEARCH AND CATEGORY FILTERS
-    // ========================================
+    // ============================================================
+    // 3. SEARCH AND CATEGORY FILTERING
+    // ============================================================
 
     let selectedCategory = "all";
 
 
-    function filterCareers() {
+    function matchesSearch(card, searchTerm) {
+        const cardText = card.textContent.toLowerCase();
 
-        const searchText = careerSearch.value
-            .toLowerCase()
-            .trim();
+        return cardText.includes(searchTerm);
+    }
+
+
+    function matchesCategory(card, category) {
+        if (category === "all") {
+            return true;
+        }
+
+        const cardCategory =
+            (card.dataset.category || "").toLowerCase();
+
+        const cardCareer =
+            (card.dataset.career || "").toLowerCase();
+
+        // Technology filter also includes the cybersecurity career.
+        if (category === "technology") {
+            return (
+                cardCategory === "technology" ||
+                cardCareer === "cybersecurity"
+            );
+        }
+
+        // Support both "ai" and "robotics" category names.
+        if (category === "ai") {
+            return (
+                cardCategory === "ai" ||
+                cardCategory === "robotics"
+            );
+        }
+
+        return cardCategory === category;
+    }
+
+
+    function filterCareers() {
+        const searchTerm = careerSearch
+            ? careerSearch.value.trim().toLowerCase()
+            : "";
 
         let visibleCount = 0;
 
+        careerCards.forEach((card) => {
+            const searchMatches =
+                matchesSearch(card, searchTerm);
 
-        careerCards.forEach(function (card) {
-
-            const category = card.dataset.category;
-
-            const careerKey = card.dataset.career;
-
-            const career = careers[careerKey];
-
-            const cardText = (
-                card.textContent + " " +
-                career.title + " " +
-                career.description + " " +
-                career.skills.join(" ") + " " +
-                career.roadmap.join(" ")
-            ).toLowerCase();
-
-
-            const matchesCategory =
-                selectedCategory === "all" ||
-                category === selectedCategory;
-
-
-            const matchesSearch =
-                cardText.includes(searchText);
-
+            const categoryMatches =
+                matchesCategory(card, selectedCategory);
 
             const shouldDisplay =
-                matchesCategory && matchesSearch;
-
+                searchMatches && categoryMatches;
 
             card.hidden = !shouldDisplay;
 
-
             if (shouldDisplay) {
-
                 visibleCount++;
-
             }
-
         });
 
-
-        noCareersMessage.hidden = visibleCount !== 0;
-
-
-        if (searchText !== "") {
-
-            searchMessage.textContent =
-                visibleCount + " career(s) found.";
-
-        } else {
-
-            searchMessage.textContent = "";
-
+        if (noCareersMessage) {
+            noCareersMessage.hidden = visibleCount !== 0;
         }
 
+        if (searchMessage) {
+            if (visibleCount === 0) {
+                searchMessage.textContent =
+                    "No careers found. Try another search or category.";
+            } else {
+                searchMessage.textContent =
+                    `${visibleCount} career${visibleCount === 1 ? "" : "s"} found.`;
+            }
+        }
     }
 
-
-    // Live search
 
     if (careerSearch) {
-
-        careerSearch.addEventListener(
-            "input",
-            filterCareers
-        );
-
+        careerSearch.addEventListener("input", filterCareers);
     }
 
 
-    // Category filter buttons
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
 
-    filterButtons.forEach(function (button) {
+            selectedCategory =
+                (button.dataset.category || "all").toLowerCase();
 
-        button.addEventListener("click", function () {
+            filterButtons.forEach((filterButton) => {
+                filterButton.classList.remove("active");
 
-            selectedCategory = button.dataset.category;
-
-
-            filterButtons.forEach(function (btn) {
-
-                const isActive = btn === button;
-
-                btn.classList.toggle("active", isActive);
-
-                btn.setAttribute(
+                filterButton.setAttribute(
                     "aria-pressed",
-                    String(isActive)
+                    "false"
                 );
-
             });
 
+            button.classList.add("active");
+
+            button.setAttribute("aria-pressed", "true");
 
             filterCareers();
-
         });
-
     });
 
 
-    // ========================================
-    // 4. DISPLAY CAREER DETAILS
-    // ========================================
+    // ============================================================
+    // 4. CAREER DETAILS
+    // ============================================================
 
-    function addListItems(container, items) {
-
-        container.replaceChildren();
-
-
-        items.forEach(function (item) {
-
-            const listItem = document.createElement("li");
-
-            listItem.textContent = item;
-
-            container.appendChild(listItem);
-
-        });
-
-    }
-
-
-    function openCareer(careerKey) {
+    function showCareerDetails(careerKey) {
 
         const career = careers[careerKey];
 
-
         if (!career) {
-
             console.error(
-                "Career information not found:",
+                "Career not found:",
                 careerKey
             );
 
             return;
-
         }
 
+        if (detailTitle) {
+            detailTitle.textContent = career.title;
+        }
 
-        detailTitle.textContent = career.title;
+        if (detailDescription) {
+            detailDescription.textContent = career.description;
+        }
 
-        detailDescription.textContent = career.description;
+        if (detailSkills) {
+            detailSkills.replaceChildren();
 
+            career.skills.forEach((skill) => {
+                const listItem = document.createElement("li");
 
-        addListItems(
-            detailSkills,
-            career.skills
-        );
+                listItem.textContent = skill;
 
+                detailSkills.appendChild(listItem);
+            });
+        }
 
-        addListItems(
-            detailRoadmap,
-            career.roadmap
-        );
+        if (detailRoadmap) {
+            detailRoadmap.replaceChildren();
 
+            career.roadmap.forEach((step) => {
+                const listItem = document.createElement("li");
 
-        // Make the resource URLs clickable.
+                listItem.textContent = step;
 
-        detailResources.replaceChildren();
+                detailRoadmap.appendChild(listItem);
+            });
+        }
 
+        if (detailResources) {
+            detailResources.replaceChildren();
 
-        career.resources.forEach(function (resource) {
-
-            const listItem = document.createElement("li");
-
-            const separator = resource.indexOf(" — ");
-
-            const label = separator !== -1
-                ? resource.slice(0, separator)
-                : resource;
-
-            const url = separator !== -1
-                ? resource.slice(separator + 3)
-                : "";
-
-
-            if (
-                url.startsWith("https://") ||
-                url.startsWith("http://")
-            ) {
+            career.resources.forEach((resource) => {
+                const listItem = document.createElement("li");
 
                 const link = document.createElement("a");
 
-                link.textContent = label;
+                link.textContent = resource.name;
 
-                link.href = url;
+                link.href = resource.url;
 
                 link.target = "_blank";
 
@@ -501,332 +488,348 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 listItem.appendChild(link);
 
-            } else {
-
-                listItem.textContent = resource;
-
-            }
-
-
-            detailResources.appendChild(listItem);
-
-        });
-
-
-        // Hide the career listing.
-
-        careerGrid.hidden = true;
-
-        careerDetails.hidden = false;
-
-
-        if (careerFilters) {
-
-            careerFilters.hidden = true;
-
+                detailResources.appendChild(listItem);
+            });
         }
 
+        if (careerDetails) {
+            careerDetails.hidden = false;
 
-        if (careerSearchContainer) {
-
-            careerSearchContainer.hidden = true;
-
+            careerDetails.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         }
 
-
-        if (sectionHeader) {
-
-            sectionHeader.hidden = true;
-
-        }
-
-
-        noCareersMessage.hidden = true;
-
-
+        // Update the URL fragment without reloading the page.
         history.replaceState(
             null,
             "",
             "#career-details"
         );
-
-
-        careerDetails.scrollIntoView({
-
-            behavior: "smooth",
-
-            block: "start"
-
-        });
-
     }
 
 
-    // Listen to every Explore Career link.
+    // Connect the Explore Career links on the career cards.
+    document.querySelectorAll(".career-link").forEach((link) => {
 
-    document.querySelectorAll(
-        ".career-card .career-link[data-career]"
-    ).forEach(function (link) {
+        link.addEventListener("click", (event) => {
 
-        link.addEventListener("click", function (event) {
+            const careerKey = link.dataset.career;
+
+            if (!careerKey) {
+                return;
+            }
 
             event.preventDefault();
 
-            openCareer(link.dataset.career);
-
+            showCareerDetails(careerKey);
         });
-
     });
 
 
-    // Return to the career cards.
+    // Back to the career listing.
+    if (backToCareers) {
 
-    function showCareerGrid() {
+        backToCareers.addEventListener("click", () => {
 
-        careerDetails.hidden = true;
+            if (careerDetails) {
+                careerDetails.hidden = true;
+            }
 
-        careerGrid.hidden = false;
+            history.replaceState(
+                null,
+                "",
+                "#careers"
+            );
 
+            const careersSection =
+                document.getElementById("careers");
 
-        if (careerFilters) {
-
-            careerFilters.hidden = false;
-
-        }
-
-
-        if (careerSearchContainer) {
-
-            careerSearchContainer.hidden = false;
-
-        }
-
-
-        if (sectionHeader) {
-
-            sectionHeader.hidden = false;
-
-        }
-
-
-        filterCareers();
-
-
-        history.replaceState(
-            null,
-            "",
-            "#careers"
-        );
-
-
-        document.getElementById("careers").scrollIntoView({
-
-            behavior: "smooth",
-
-            block: "start"
-
+            if (careersSection) {
+                careersSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
         });
-
     }
 
 
-    backButton.addEventListener(
-        "click",
-        showCareerGrid
-    );
+    // ============================================================
+    // 5. CAREER ASSESSMENT - FASTAPI BACKEND
+    // ============================================================
 
+    const assessmentForm =
+        document.getElementById("assessmentForm");
 
-    // ========================================
-    // 5. CAREER ASSESSMENT
-    // ========================================
+    const assessmentResult =
+        document.getElementById("assessmentResult");
 
-    let recommendedCareerKey = null;
+    const resultTitle =
+        document.getElementById("resultTitle");
 
+    const resultDescription =
+        document.getElementById("resultDescription");
 
-    function recommendCareer(interest, strength) {
-
-        // Strongest interest is the primary signal.
-
-        const interestRecommendations = {
-
-            technology: "software",
-
-            robotics: "robotics",
-
-            data: "data",
-
-            security: "cybersecurity",
-
-            web: "web",
-
-            business: "entrepreneur"
-
-        };
-
-
-        let careerKey = interestRecommendations[interest];
-
-
-        // Use the strength as an additional signal.
-
-        if (strength === "leadership" && interest === "business") {
-
-            careerKey = "entrepreneur";
-
-        } else if (
-            strength === "building" &&
-            interest === "robotics"
-        ) {
-
-            careerKey = "robotics";
-
-        } else if (
-            strength === "analysis" &&
-            interest === "data"
-        ) {
-
-            careerKey = "data";
-
-        } else if (
-            strength === "creativity" &&
-            interest === "web"
-        ) {
-
-            careerKey = "web";
-
-        }
-
-
-        return careerKey;
-
-    }
+    const resultCareers =
+        document.getElementById("resultCareers");
 
 
     if (assessmentForm) {
 
         assessmentForm.addEventListener(
             "submit",
-            function (event) {
+            async (event) => {
 
                 event.preventDefault();
 
+                const formData =
+                    new FormData(assessmentForm);
 
-                const interest = document.getElementById(
-                    "interest"
-                ).value;
+                // Read the user's assessment answers.
+                const assessmentData = {
+                    interest: String(
+                        formData.get("interest") || ""
+                    ).trim().toLowerCase(),
+
+                    strength: String(
+                        formData.get("strength") || ""
+                    ).trim().toLowerCase(),
+
+                    experience: String(
+                        formData.get("experience") || ""
+                    ).trim().toLowerCase()
+                };
 
 
-                const strength = document.getElementById(
-                    "strength"
-                ).value;
+                // Validate that the required answers are present.
+                if (
+                    !assessmentData.interest ||
+                    !assessmentData.strength ||
+                    !assessmentData.experience
+                ) {
+                    if (assessmentResult) {
+                        assessmentResult.hidden = false;
+                    }
+
+                    if (resultTitle) {
+                        resultTitle.textContent =
+                            "Please complete the assessment";
+                    }
+
+                    if (resultDescription) {
+                        resultDescription.textContent =
+                            "Answer all the questions before requesting a career recommendation.";
+                    }
+
+                    return;
+                }
 
 
-                const experience = document.getElementById(
-                    "experience"
-                ).value;
+                // Display a loading message.
+                if (assessmentResult) {
+                    assessmentResult.hidden = false;
+
+                    assessmentResult.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest"
+                    });
+                }
+
+                if (resultTitle) {
+                    resultTitle.textContent =
+                        "Finding your career recommendation...";
+                }
+
+                if (resultDescription) {
+                    resultDescription.textContent =
+                        "Connecting to CareerPathAI...";
+                }
+
+                if (resultCareers) {
+                    resultCareers.replaceChildren();
+                }
 
 
-                if (!interest || !strength || !experience) {
+                try {
 
-                    alert(
-                        "Please answer all three questions."
+                    // Send the assessment answers to FastAPI.
+                    const response = await fetch(
+                        "http://127.0.0.1:8000/api/recommend",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify(assessmentData)
+                        }
                     );
 
-                    return;
 
+                    // Read the JSON response.
+                    const data = await response.json();
+
+
+                    // Handle HTTP errors returned by the backend.
+                    if (!response.ok) {
+
+                        const errorMessage =
+                            typeof data.detail === "string"
+                                ? data.detail
+                                : "The backend could not generate a recommendation.";
+
+                        throw new Error(errorMessage);
+                    }
+
+
+                    // The backend should return recommended_career.
+                    const recommended =
+                        data.recommended_career;
+
+
+                    if (
+                        !recommended ||
+                        !recommended.id ||
+                        !recommended.title
+                    ) {
+                        throw new Error(
+                            "The backend response does not contain a valid recommended career."
+                        );
+                    }
+
+
+                    // Display the recommended career.
+                    if (resultTitle) {
+                        resultTitle.textContent =
+                            "Your Recommended Career: " +
+                            recommended.title;
+                    }
+
+                    if (resultDescription) {
+                        resultDescription.textContent =
+                            recommended.description ||
+                            "Explore this career to learn more about the skills you need.";
+                    }
+
+
+                    // Display the skills returned by the backend.
+                    if (resultCareers) {
+
+                        resultCareers.replaceChildren();
+
+                        if (
+                            Array.isArray(recommended.skills) &&
+                            recommended.skills.length > 0
+                        ) {
+                            const skillsHeading =
+                                document.createElement("h4");
+
+                            skillsHeading.textContent =
+                                "Recommended Skills";
+
+                            resultCareers.appendChild(skillsHeading);
+
+                            const skillsList =
+                                document.createElement("ul");
+
+                            recommended.skills.forEach((skill) => {
+
+                                const listItem =
+                                    document.createElement("li");
+
+                                listItem.textContent = skill;
+
+                                skillsList.appendChild(listItem);
+                            });
+
+                            resultCareers.appendChild(skillsList);
+                        }
+
+
+                        // Create a button to open the full career details.
+                        const exploreButton =
+                            document.createElement("button");
+
+                        exploreButton.type = "button";
+
+                        exploreButton.className = "career-link";
+
+                        exploreButton.textContent =
+                            "Explore " + recommended.title;
+
+                        exploreButton.addEventListener(
+                            "click",
+                            () => {
+
+                                const careerKey =
+                                    recommended.id;
+
+                                // Use the local career information
+                                // to display the full roadmap.
+                                if (careers[careerKey]) {
+
+                                    showCareerDetails(careerKey);
+
+                                } else {
+
+                                    console.error(
+                                        "No local details found for:",
+                                        careerKey
+                                    );
+
+                                    if (resultDescription) {
+                                        resultDescription.textContent +=
+                                            " Detailed roadmap information is not yet available for this career.";
+                                    }
+                                }
+                            }
+                        );
+
+                        resultCareers.appendChild(exploreButton);
+                    }
+
+                    console.log(
+                        "Career recommendation received:",
+                        data
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "Career assessment error:",
+                        error
+                    );
+
+
+                    if (resultTitle) {
+                        resultTitle.textContent =
+                            "Unable to Get Recommendation";
+                    }
+
+                    if (resultDescription) {
+                        resultDescription.textContent =
+                            "Could not connect to the backend. Check that FastAPI is running at http://127.0.0.1:8000 and try again. Error: " +
+                            error.message;
+                    }
+
+                    if (resultCareers) {
+                        resultCareers.replaceChildren();
+                    }
                 }
-
-
-                recommendedCareerKey = recommendCareer(
-                    interest,
-                    strength
-                );
-
-
-                const career = careers[recommendedCareerKey];
-
-
-                if (!career) {
-
-                    return;
-
-                }
-
-
-                let experienceAdvice = "";
-
-
-                if (experience === "beginner") {
-
-                    experienceAdvice =
-                        "Start with programming fundamentals and small projects.";
-
-                } else if (experience === "intermediate") {
-
-                    experienceAdvice =
-                        "Strengthen your core skills and build practical projects.";
-
-                } else {
-
-                    experienceAdvice =
-                        "Focus on advanced projects, a portfolio, and internship opportunities.";
-
-                }
-
-
-                assessmentMessage.textContent =
-                    "Based on your selected interests and strengths, " +
-                    career.title +
-                    " is a career worth exploring. " +
-                    experienceAdvice;
-
-
-                assessmentResult.hidden = false;
-
-
-                assessmentResult.scrollIntoView({
-
-                    behavior: "smooth",
-
-                    block: "center"
-
-                });
-
             }
         );
-
     }
 
 
-    // Open the recommended career profile.
-
-    if (viewRecommendedCareer) {
-
-        viewRecommendedCareer.addEventListener(
-            "click",
-            function () {
-
-                if (recommendedCareerKey) {
-
-                    openCareer(recommendedCareerKey);
-
-                }
-
-            }
-        );
-
-    }
-
-
-    // ========================================
-    // 6. INITIALIZE THE WEBSITE
-    // ========================================
+    // ============================================================
+    // 6. INITIALIZE THE PAGE
+    // ============================================================
 
     filterCareers();
 
-
-    console.log(
-        "CareerPathAI initialized successfully."
-    );
+    console.log("CareerPathAI frontend initialized successfully.");
 
 });
