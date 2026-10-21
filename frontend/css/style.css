@@ -1,5 +1,3 @@
-/* ===== HERO SECTION FIX ===== */
-
 .hero {
     min-height: 480px;
     padding: 75px 8% 50px;
@@ -20,8 +18,6 @@
     margin: 0 auto 28px;
 }
 
-/* ===== HERO BUTTONS FIX ===== */
-
 .hero a {
     display: inline-block;
     margin: 5px;
@@ -34,9 +30,6 @@
     transform: translateY(-2px);
 }
 
-/* ===== STATISTICS FIX ===== */
-
-/* Adjust these selectors if your HTML uses different class names. */
 .hero .stats,
 .stats {
     display: flex;
@@ -67,8 +60,6 @@
     margin: 0;
 }
 
-/* ===== CAREER JOURNEY FIX ===== */
-
 #journey {
     padding: 65px 8%;
     text-align: center;
@@ -98,8 +89,6 @@
 .journey-card p {
     color: #a7b0c5;
 }
-
-/* ===== RESPONSIVE DESIGN ===== */
 
 @media (max-width: 768px) {
     .navbar {
@@ -145,7 +134,6 @@ body {
     color: #8b7cff;
 }
 
-/* Navbar Fix */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -192,7 +180,6 @@ body {
     background: #7564ed;
 }
 
-/* Hero Section Buttons */
 .hero a {
     display: inline-block;
     padding: 12px 24px;
@@ -210,7 +197,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Statistics Section */
 .hero-stats {
     display: flex;
     justify-content: center;
@@ -249,7 +235,6 @@ body {
     margin: 0;
 }
 
-/* Mobile Responsive */
 @media (max-width: 600px) {
     .hero-stats {
         flex-direction: column;
@@ -262,7 +247,6 @@ body {
     }
 }
 
-/* Career Journey Section */
 .journey-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -302,7 +286,6 @@ body {
     }
 }
 
-/* Career Journey Steps */
 .journey-step {
     display: flex;
     align-items: center;
@@ -353,7 +336,6 @@ body {
     }
 }
 
-/* Add space before Career Journey */
 .hero-stats + .hero-card {
     margin-top: 50px;
 }
@@ -366,7 +348,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Fix spacing in Career Journey section */
 .hero-card {
     margin-top: 60px !important;
 }
@@ -379,10 +360,6 @@ body {
     margin-top: 20px !important;
     margin-bottom: 35px !important;
 }
-
-/* =========================
-   EXPLORE CAREERS SECTION
-========================= */
 
 .careers {
     padding: 90px 8%;
@@ -414,8 +391,6 @@ body {
     line-height: 1.7;
 }
 
-/* Search Bar */
-
 .career-search {
     max-width: 600px;
     margin: 0 auto 28px;
@@ -442,8 +417,6 @@ body {
     color: #8997b0;
 }
 
-/* Category Filters */
-
 .career-filters {
     display: flex;
     justify-content: center;
@@ -469,8 +442,6 @@ body {
     border-color: #8b7cff;
 }
 
-/* Career Cards Grid */
-
 .career-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -478,8 +449,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* Individual Career Card */
 
 .career-card {
     background: #121b30;
@@ -529,8 +498,6 @@ body {
 .career-link:hover {
     color: #ffffff;
 }
-
-/* Responsive Design */
 
 @media (max-width: 900px) {
     .career-grid {

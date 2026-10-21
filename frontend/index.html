@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CareerPath AI | Discover Your Future</title>
+    <meta name="description"
+        content="Discover careers, explore skills, and build your personalized learning roadmap with CareerPathAI.">
+
+    <title>CareerPathAI | Discover Your Future</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
+    <!-- ================= NAVBAR ================= -->
+
     <header class="navbar">
-        <div class="logo">CareerPath<span>AI</span></div>
+
+        <div class="logo">
+            CareerPath<span>AI</span>
+        </div>
 
         <nav>
             <a href="#home">Home</a>
@@ -20,14 +31,24 @@
             <a href="#about">About</a>
         </nav>
 
-        <a href="#assessment" class="nav-button">Get Started</a>
+        <a href="#assessment" class="nav-button">
+            Get Started
+        </a>
+
     </header>
 
+
     <main>
+
+        <!-- ================= HERO SECTION ================= -->
+
         <section class="hero" id="home">
 
             <div class="hero-content">
-                <p class="tagline">YOUR FUTURE STARTS HERE</p>
+
+                <p class="tagline">
+                    YOUR FUTURE STARTS HERE
+                </p>
 
                 <h1>
                     Discover Your
@@ -41,6 +62,7 @@
                 </p>
 
                 <div class="hero-buttons">
+
                     <a href="#assessment" class="primary-button">
                         Find My Career →
                     </a>
@@ -48,9 +70,11 @@
                     <a href="#careers" class="secondary-button">
                         Explore Careers
                     </a>
+
                 </div>
 
                 <div class="hero-stats">
+
                     <div>
                         <h3>50+</h3>
                         <p>Career Paths</p>
@@ -65,207 +89,643 @@
                         <h3>AI-Powered</h3>
                         <p>Career Guidance</p>
                     </div>
+
                 </div>
+
             </div>
 
+
             <div class="hero-card">
-                <div class="card-icon"> </div>
 
-                <p class="card-label">YOUR CAREER JOURNEY</p>
+                <div class="card-icon">🚀</div>
 
-                <h2>Your potential is limitless.</h2>
+                <p class="card-label">
+                    YOUR CAREER JOURNEY
+                </p>
+
+                <h2>
+                    Your potential is limitless.
+                </h2>
 
                 <div class="journey-step">
+
                     <span>01</span>
+
                     <div>
                         <h4>Discover Yourself</h4>
                         <p>Understand your interests and strengths.</p>
                     </div>
+
                 </div>
 
                 <div class="journey-step">
+
                     <span>02</span>
+
                     <div>
                         <h4>Explore Opportunities</h4>
                         <p>Find careers that match your profile.</p>
                     </div>
+
                 </div>
 
                 <div class="journey-step">
+
                     <span>03</span>
+
                     <div>
                         <h4>Build Your Future</h4>
                         <p>Follow a roadmap toward your goals.</p>
                     </div>
+
                 </div>
+
             </div>
 
         </section>
 
+
+        <!-- ================= CAREERS SECTION ================= -->
+
         <section class="careers" id="careers">
 
-    <div class="section-header">
-        <p class="section-label">EXPLORE YOUR OPTIONS</p>
+            <div class="section-header">
 
-        <h2>Discover Careers That Match Your Passion</h2>
+                <p class="section-label">
+                    EXPLORE YOUR OPTIONS
+                </p>
 
-        <p class="section-description">
-            Explore different career paths, discover new opportunities,
-            and find the right direction for your future.
+                <h2>
+                    Discover Careers That Match Your Passion
+                </h2>
+
+                <p class="section-description">
+                    Explore different career paths, discover new opportunities,
+                    and find the right direction for your future.
+                </p>
+
+            </div>
+
+
+            <!-- Career Search -->
+
+            <div class="career-search">
+
+                <input
+                    type="search"
+                    id="careerSearch"
+                    placeholder="Search careers, skills, or industries..."
+                    aria-label="Search careers"
+                    autocomplete="off"
+                >
+
+                <p id="searchMessage" role="status" aria-live="polite"></p>
+
+            </div>
+
+
+            <!-- Career Filters -->
+
+            <div class="career-filters">
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-category="all"
+                    aria-pressed="true"
+                >
+                    All Careers
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="technology"
+                    aria-pressed="false"
+                >
+                    Technology
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="ai"
+                    aria-pressed="false"
+                >
+                    AI & Robotics
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="data"
+                    aria-pressed="false"
+                >
+                    Data Science
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="business"
+                    aria-pressed="false"
+                >
+                    Business
+                </button>
+
+            </div>
+
+
+            <!-- Career Cards -->
+
+            <div class="career-grid">
+
+                <!-- Software Developer -->
+
+                <article
+                    class="career-card"
+                    data-category="technology"
+                    data-career="software"
+                >
+
+                    <div class="career-icon">💻</div>
+
+                    <h3>Software Developer</h3>
+
+                    <p>
+                        Build applications, websites, and software
+                        solutions that solve real-world problems.
+                    </p>
+
+                    <div class="career-skills">
+                        Python · Java · DSA
+                    </div>
+
+                    <a
+                        href="#career-details"
+                        class="career-link"
+                        data-career="software"
+                    >
+                        Explore Career →
+                    </a>
+
+                </article>
+
+
+                <!-- AI and Robotics Engineer -->
+
+                <article
+                    class="career-card"
+                    data-category="ai"
+                    data-career="robotics"
+                >
+
+                    <div class="career-icon">🤖</div>
+
+                    <h3>AI & Robotics Engineer</h3>
+
+                    <p>
+                        Develop intelligent robots, autonomous systems,
+                        and AI-powered machines.
+                    </p>
+
+                    <div class="career-skills">
+                        Python · ROS 2 · C++
+                    </div>
+
+                    <a
+                        href="#career-details"
+                        class="career-link"
+                        data-career="robotics"
+                    >
+                        Explore Career →
+                    </a>
+
+                </article>
+
+
+                <!-- Data Scientist -->
+
+                <article
+                    class="career-card"
+                    data-category="data"
+                    data-career="data"
+                >
+
+                    <div class="career-icon">📊</div>
+
+                    <h3>Data Scientist</h3>
+
+                    <p>
+                        Analyze data, build predictive models,
+                        and discover meaningful patterns.
+                    </p>
+
+                    <div class="career-skills">
+                        Python · SQL · Machine Learning
+                    </div>
+
+                    <a
+                        href="#career-details"
+                        class="career-link"
+                        data-career="data"
+                    >
+                        Explore Career →
+                    </a>
+
+                </article>
+
+
+                <!-- Cybersecurity Engineer -->
+
+                <article
+                    class="career-card"
+                    data-category="technology"
+                    data-career="cybersecurity"
+                >
+
+                    <div class="career-icon">🔐</div>
+
+                    <h3>Cybersecurity Engineer</h3>
+
+                    <p>
+                        Protect computer systems, networks,
+                        and applications against cyber threats.
+                    </p>
+
+                    <div class="career-skills">
+                        Networking · Linux · Security
+                    </div>
+
+                    <a
+                        href="#career-details"
+                        class="career-link"
+                        data-career="cybersecurity"
+                    >
+                        Explore Career →
+                    </a>
+
+                </article>
+
+
+                <!-- Web Developer -->
+
+                <article
+                    class="career-card"
+                    data-category="technology"
+                    data-career="web"
+                >
+
+                    <div class="career-icon">🌐</div>
+
+                    <h3>Web Developer</h3>
+
+                    <p>
+                        Design and develop interactive websites
+                        and modern web applications.
+                    </p>
+
+                    <div class="career-skills">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                    <a
+                        href="#career-details"
+                        class="career-link"
+                        data-career="web"
+                    >
+                        Explore Career →
+                    </a>
+
+                </article>
+
+
+                <!-- Entrepreneur -->
+
+                <article
+                    class="career-card"
+                    data-category="business"
+                    data-career="entrepreneur"
+                >
+
+                    <div class="career-icon">🚀</div>
+
+                    <h3>Entrepreneur</h3>
+
+                    <p>
+                        Turn innovative ideas into products,
+                        businesses, and real-world solutions.
+                    </p>
+
+                    <div class="career-skills">
+                        Strategy · Innovation · Leadership
+                    </div>
+
+                    <a
+                        href="#career-details"
+                        class="career-link"
+                        data-career="entrepreneur"
+                    >
+                        Explore Career →
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- No Search Results -->
+
+            <p
+                id="noCareersMessage"
+                role="status"
+                hidden
+            >
+                No matching careers found. Try another search.
+            </p>
+
+
+            <!-- ================= CAREER DETAILS ================= -->
+
+            <section
+                id="career-details"
+                class="career-details"
+                aria-labelledby="detailTitle"
+                hidden
+            >
+
+                <button
+                    type="button"
+                    id="backToCareers"
+                    class="back-button"
+                >
+                    ← Back to Careers
+                </button>
+
+
+                <div class="career-details-content">
+
+                    <p class="section-label">
+                        YOUR CAREER ROADMAP
+                    </p>
+
+                    <h2 id="detailTitle">
+                        Career Details
+                    </h2>
+
+                    <p id="detailDescription"></p>
+
+
+                    <h3>Required Skills</h3>
+
+                    <ul id="detailSkills"></ul>
+
+
+                    <h3>Learning Roadmap</h3>
+
+                    <ol id="detailRoadmap"></ol>
+
+
+                    <h3>Recommended Resources</h3>
+
+                    <ul id="detailResources"></ul>
+
+
+                    <a
+                        href="#assessment"
+                        class="primary-button"
+                        id="careerAssessmentLink"
+                    >
+                        Take Career Assessment →
+                    </a>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================= CAREER ASSESSMENT ================= -->
+
+        <section class="assessment" id="assessment">
+
+            <div class="section-header">
+
+                <p class="section-label">
+                    DISCOVER YOUR STRENGTHS
+                </p>
+
+                <h2>Find Your Career Direction</h2>
+
+                <p class="section-description">
+                    Answer a few questions about your interests
+                    to discover career paths worth exploring.
+                </p>
+
+            </div>
+
+
+            <form id="assessmentForm">
+
+                <div class="assessment-question">
+
+                    <label for="interest">
+                        1. Which area interests you most?
+                    </label>
+
+                    <select id="interest" name="interest" required>
+
+                        <option value="">
+                            Select your interest
+                        </option>
+
+                        <option value="technology">
+                            Software and Technology
+                        </option>
+
+                        <option value="robotics">
+                            AI, Robotics and Automation
+                        </option>
+
+                        <option value="data">
+                            Data Analysis and Mathematics
+                        </option>
+
+                        <option value="security">
+                            Cybersecurity
+                        </option>
+
+                        <option value="web">
+                            Website and Application Design
+                        </option>
+
+                        <option value="business">
+                            Business and Entrepreneurship
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="assessment-question">
+
+                    <label for="strength">
+                        2. What is your strongest interest or skill?
+                    </label>
+
+                    <select id="strength" name="strength" required>
+
+                        <option value="">
+                            Select your strength
+                        </option>
+
+                        <option value="programming">
+                            Programming and Problem-Solving
+                        </option>
+
+                        <option value="mathematics">
+                            Mathematics and Logical Thinking
+                        </option>
+
+                        <option value="building">
+                            Building and Experimenting
+                        </option>
+
+                        <option value="analysis">
+                            Research and Data Analysis
+                        </option>
+
+                        <option value="creativity">
+                            Creativity and Design
+                        </option>
+
+                        <option value="leadership">
+                            Leadership and Business
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="assessment-question">
+
+                    <label for="experience">
+                        3. What is your current experience level?
+                    </label>
+
+                    <select id="experience" name="experience" required>
+
+                        <option value="">
+                            Select your experience
+                        </option>
+
+                        <option value="beginner">
+                            Beginner — just starting
+                        </option>
+
+                        <option value="intermediate">
+                            Intermediate — know the basics
+                        </option>
+
+                        <option value="advanced">
+                            Advanced — have built projects
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="primary-button">
+                    Find My Career →
+                </button>
+
+            </form>
+
+
+            <!-- Assessment Result -->
+
+            <div
+                id="assessmentResult"
+                aria-live="polite"
+                hidden
+            >
+
+                <h3>Your Suggested Career</h3>
+
+                <p id="assessmentMessage"></p>
+
+                <button
+                    type="button"
+                    id="viewRecommendedCareer"
+                    class="secondary-button"
+                >
+                    Explore Recommended Career →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT SECTION ================= -->
+
+        <section class="about" id="about">
+
+            <div class="section-header">
+
+                <p class="section-label">
+                    ABOUT CAREERPATHAI
+                </p>
+
+                <h2>Make Informed Career Decisions</h2>
+
+                <p class="section-description">
+                    CareerPathAI helps students explore professional
+                    opportunities, understand required skills,
+                    and plan their learning journey.
+                </p>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div>
+                    <h3>Explore</h3>
+                    <p>Discover career opportunities.</p>
+                </div>
+
+                <div>
+                    <h3>Learn</h3>
+                    <p>Understand skills and roadmaps.</p>
+                </div>
+
+                <div>
+                    <h3>Plan</h3>
+                    <p>Choose your next learning steps.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 CareerPathAI. Built to help students explore their futures.
         </p>
-    </div>
 
-    <!-- Career Search -->
-    <div class="career-search">
-        <input
-            type="text"
-            id="careerSearch"
-            placeholder="Search careers, skills, or industries..."
-        >
-    </div>
+    </footer>
 
-    <!-- Category Filters -->
-    <div class="career-filters">
+</body>
 
-        <button class="filter-btn active" data-category="all">
-            All Careers
-        </button>
-
-        <button class="filter-btn" data-category="technology">
-            Technology
-        </button>
-
-        <button class="filter-btn" data-category="ai">
-            AI & Robotics
-        </button>
-
-        <button class="filter-btn" data-category="data">
-            Data Science
-        </button>
-
-        <button class="filter-btn" data-category="business">
-            Business
-        </button>
-
-    </div>
-
-    <!-- Career Cards -->
-    <div class="career-grid">
-
-        <div class="career-card" data-category="technology">
-            <div class="career-icon">💻</div>
-
-            <h3>Software Developer</h3>
-
-            <p>
-                Build applications, websites, and software
-                solutions that solve real-world problems.
-            </p>
-
-            <div class="career-skills">
-                Python · Java · DSA
-            </div>
-
-            <a href="#assessment" class="career-link">
-                Explore Career →
-            </a>
-        </div>
-
-        <div class="career-card" data-category="ai">
-            <div class="career-icon">🤖</div>
-
-            <h3>AI & Robotics Engineer</h3>
-
-            <p>
-                Develop intelligent robots, autonomous systems,
-                and AI-powered machines.
-            </p>
-
-            <div class="career-skills">
-                Python · ROS 2 · C++
-            </div>
-
-            <a href="#assessment" class="career-link">
-                Explore Career →
-            </a>
-        </div>
-
-        <div class="career-card" data-category="data">
-            <div class="career-icon">📊</div>
-
-            <h3>Data Scientist</h3>
-
-            <p>
-                Analyze data, build predictive models, and
-                discover meaningful patterns.
-            </p>
-
-            <div class="career-skills">
-                Python · SQL · Machine Learning
-            </div>
-
-            <a href="#assessment" class="career-link">
-                Explore Career →
-            </a>
-        </div>
-
-        <div class="career-card" data-category="technology">
-            <div class="career-icon">🔐</div>
-
-            <h3>Cybersecurity Engineer</h3>
-
-            <p>
-                Protect computer systems, networks, and
-                applications against cyber threats.
-            </p>
-
-            <div class="career-skills">
-                Networking · Linux · Security
-            </div>
-
-            <a href="#assessment" class="career-link">
-                Explore Career →
-            </a>
-        </div>
-
-        <div class="career-card" data-category="technology">
-            <div class="career-icon">🌐</div>
-
-            <h3>Web Developer</h3>
-
-            <p>
-                Design and develop interactive websites
-                and modern web applications.
-            </p>
-
-            <div class="career-skills">
-                HTML · CSS · JavaScript
-            </div>
-
-            <a href="#assessment" class="career-link">
-                Explore Career →
-            </a>
-        </div>
-
-        <div class="career-card" data-category="business">
-            <div class="career-icon">🚀</div>
-
-            <h3>Entrepreneur</h3>
-
-            <p>
-                Turn innovative ideas into products,
-                businesses, and real-world solutions.
-            </p>
-
-            <div class="career-skills">
-                Strategy · Innovation · Leadership
-            </div>
-
-            <a href="#assessment" class="career-link">
-                Explore Career →
-            </a>
-        </div>
-
-    </div>
-
-</section>
+</html>
