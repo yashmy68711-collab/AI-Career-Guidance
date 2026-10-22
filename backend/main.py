@@ -277,13 +277,4 @@ def recommend_career(request: RecommendationRequest):
         if career["id"] == career_id
     )
 
-    return {
-        "message": "Career recommendation generated successfully.",
-        "recommendation_type": "rules-based",
-        "input": {
-            "interest": request.interest,
-            "strength": request.strength,
-            "experience": request.experience,
-        },
-        "recommended_career": recommended_career,
-    }
+    
