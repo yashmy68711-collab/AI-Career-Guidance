@@ -12,19 +12,175 @@
 
     <title>CareerPathAI | Discover Your Future</title>
 
-    <!-- Website stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Website JavaScript -->
     <script src="js/script.js" defer></script>
+
+    <!-- Navbar and hero layout fixes -->
+    <style>
+        .navbar {
+            width: 100%;
+            padding: 18px 0;
+            background: #121a2e;
+            box-sizing: border-box;
+        }
+
+        .navbar .nav-container {
+            width: min(1200px, 90%);
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 24px;
+        }
+
+        .navbar .logo {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            white-space: nowrap;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .navbar .logo span,
+        .footer .logo span {
+            color: #8977ff;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: clamp(12px, 2vw, 28px);
+            margin: 0 auto;
+        }
+
+        .navbar .nav-links a {
+            display: inline-block;
+            color: #e2e8f0;
+            text-decoration: none;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #a99cff;
+        }
+
+        .navbar .nav-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin: 0;
+            padding: 12px 18px;
+            border-radius: 9px;
+            background: #8977ff;
+            color: #ffffff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .hero .hero-highlights {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            width: 100%;
+            margin: 28px auto 0;
+        }
+
+        .hero .highlight-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            min-width: 145px;
+            padding: 14px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: #121a2e;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .hero .highlight-item strong {
+            color: #a99cff;
+        }
+
+        .hero .highlight-item span {
+            color: #e2e8f0;
+        }
+
+        .career-details[hidden],
+        .assessment-result[hidden],
+        .career-card[hidden],
+        .no-careers-message[hidden] {
+            display: none !important;
+        }
+
+        @media (max-width: 900px) {
+            .navbar .nav-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .navbar .nav-button {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .navbar .nav-container {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .navbar .nav-links {
+                order: initial;
+                gap: 12px 18px;
+            }
+
+            .navbar .nav-links a {
+                font-size: 14px;
+            }
+
+            .navbar .nav-button {
+                margin: 0 auto;
+            }
+
+            .hero .hero-highlights {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero .highlight-item {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- =======================================
-         NAVIGATION
-    ======================================== -->
-
+    <!-- NAVIGATION -->
     <header class="navbar">
         <div class="container nav-container">
 
@@ -46,13 +202,9 @@
         </div>
     </header>
 
-
     <main>
 
-        <!-- =======================================
-             HERO SECTION
-        ======================================== -->
-
+        <!-- HERO SECTION -->
         <section class="hero" id="home">
 
             <div class="container hero-container">
@@ -74,7 +226,6 @@
                     </p>
 
                     <div class="hero-buttons">
-
                         <a href="#careers" class="primary-button">
                             Explore Careers
                         </a>
@@ -82,7 +233,6 @@
                         <a href="#assessment" class="secondary-button">
                             Take Career Assessment
                         </a>
-
                     </div>
 
                     <div class="hero-highlights">
@@ -107,20 +257,13 @@
                 </div>
 
                 <div class="hero-visual">
-
                     <div class="journey-card">
 
-                        <div class="journey-icon">
-                            🚀
-                        </div>
+                        <div class="journey-icon">🚀</div>
 
-                        <p class="eyebrow">
-                            YOUR NEXT STEP
-                        </p>
+                        <p class="eyebrow">YOUR NEXT STEP</p>
 
-                        <h2>
-                            Build Your Future
-                        </h2>
+                        <h2>Build Your Future</h2>
 
                         <p>
                             Discover your interests, develop valuable skills,
@@ -132,31 +275,22 @@
                         </a>
 
                     </div>
-
                 </div>
 
             </div>
 
         </section>
 
-
-        <!-- =======================================
-             CAREERS SECTION
-        ======================================== -->
-
+        <!-- CAREERS SECTION -->
         <section class="careers section" id="careers">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <p class="eyebrow">
-                        EXPLORE YOUR OPTIONS
-                    </p>
+                    <p class="eyebrow">EXPLORE YOUR OPTIONS</p>
 
-                    <h2>
-                        Discover Careers That Match Your Passion
-                    </h2>
+                    <h2>Discover Careers That Match Your Passion</h2>
 
                     <p>
                         Explore different career paths, discover new
@@ -166,11 +300,8 @@
 
                 </div>
 
-
-                <!-- CAREER SEARCH -->
-
+                <!-- Search -->
                 <div class="career-search">
-
                     <label for="careerSearch" class="visually-hidden">
                         Search careers
                     </label>
@@ -181,12 +312,9 @@
                         placeholder="Search careers, skills, or interests..."
                         autocomplete="off"
                     >
-
                 </div>
 
-
-                <!-- CATEGORY FILTERS -->
-
+                <!-- Category filters -->
                 <div
                     class="career-filters"
                     role="group"
@@ -240,36 +368,23 @@
 
                 </div>
 
-
-                <!-- SEARCH STATUS -->
-
                 <p
                     id="searchMessage"
                     class="search-message"
                     aria-live="polite"
                 ></p>
 
-
-                <!-- CAREER CARDS -->
-
+                <!-- Career cards -->
                 <div class="career-grid" id="careerGrid">
-
-
-                    <!-- 1. SOFTWARE DEVELOPER -->
 
                     <article
                         class="career-card"
                         data-category="technology"
                         data-career="software"
                     >
+                        <div class="career-icon" aria-hidden="true">💻</div>
 
-                        <div class="career-icon" aria-hidden="true">
-                            💻
-                        </div>
-
-                        <h3>
-                            Software Developer
-                        </h3>
+                        <h3>Software Developer</h3>
 
                         <p>
                             Build applications, websites, and software
@@ -287,25 +402,16 @@
                         >
                             Explore Career →
                         </a>
-
                     </article>
-
-
-                    <!-- 2. AI AND ROBOTICS ENGINEER -->
 
                     <article
                         class="career-card"
                         data-category="ai"
                         data-career="robotics"
                     >
+                        <div class="career-icon" aria-hidden="true">🤖</div>
 
-                        <div class="career-icon" aria-hidden="true">
-                            🤖
-                        </div>
-
-                        <h3>
-                            AI &amp; Robotics Engineer
-                        </h3>
+                        <h3>AI &amp; Robotics Engineer</h3>
 
                         <p>
                             Develop intelligent robots, autonomous systems,
@@ -323,25 +429,16 @@
                         >
                             Explore Career →
                         </a>
-
                     </article>
-
-
-                    <!-- 3. DATA SCIENTIST -->
 
                     <article
                         class="career-card"
                         data-category="data"
                         data-career="data"
                     >
+                        <div class="career-icon" aria-hidden="true">📊</div>
 
-                        <div class="career-icon" aria-hidden="true">
-                            📊
-                        </div>
-
-                        <h3>
-                            Data Scientist
-                        </h3>
+                        <h3>Data Scientist</h3>
 
                         <p>
                             Analyze data, build predictive models,
@@ -359,25 +456,16 @@
                         >
                             Explore Career →
                         </a>
-
                     </article>
-
-
-                    <!-- 4. CYBERSECURITY ENGINEER -->
 
                     <article
                         class="career-card"
                         data-category="technology"
                         data-career="cybersecurity"
                     >
+                        <div class="career-icon" aria-hidden="true">🔐</div>
 
-                        <div class="career-icon" aria-hidden="true">
-                            🔐
-                        </div>
-
-                        <h3>
-                            Cybersecurity Engineer
-                        </h3>
+                        <h3>Cybersecurity Engineer</h3>
 
                         <p>
                             Protect computer systems, networks,
@@ -395,25 +483,16 @@
                         >
                             Explore Career →
                         </a>
-
                     </article>
-
-
-                    <!-- 5. WEB DEVELOPER -->
 
                     <article
                         class="career-card"
                         data-category="technology"
                         data-career="web"
                     >
+                        <div class="career-icon" aria-hidden="true">🌐</div>
 
-                        <div class="career-icon" aria-hidden="true">
-                            🌐
-                        </div>
-
-                        <h3>
-                            Web Developer
-                        </h3>
+                        <h3>Web Developer</h3>
 
                         <p>
                             Design and develop interactive websites
@@ -431,25 +510,16 @@
                         >
                             Explore Career →
                         </a>
-
                     </article>
-
-
-                    <!-- 6. ENTREPRENEUR -->
 
                     <article
                         class="career-card"
                         data-category="business"
                         data-career="entrepreneur"
                     >
+                        <div class="career-icon" aria-hidden="true">💡</div>
 
-                        <div class="career-icon" aria-hidden="true">
-                            💡
-                        </div>
-
-                        <h3>
-                            Entrepreneur
-                        </h3>
+                        <h3>Entrepreneur</h3>
 
                         <p>
                             Turn innovative ideas into products,
@@ -467,13 +537,9 @@
                         >
                             Explore Career →
                         </a>
-
                     </article>
 
                 </div>
-
-
-                <!-- NO RESULTS MESSAGE -->
 
                 <p
                     id="noCareersMessage"
@@ -487,11 +553,7 @@
 
         </section>
 
-
-        <!-- =======================================
-             CAREER DETAILS SECTION
-        ======================================== -->
-
+        <!-- CAREER DETAILS -->
         <section
             class="career-details section"
             id="career-details"
@@ -510,13 +572,9 @@
 
                 <div class="career-details-header">
 
-                    <p class="eyebrow">
-                        CAREER EXPLORER
-                    </p>
+                    <p class="eyebrow">CAREER EXPLORER</p>
 
-                    <h2 id="detailTitle">
-                        Career Title
-                    </h2>
+                    <h2 id="detailTitle">Career Title</h2>
 
                     <p id="detailDescription">
                         Explore this career and learn about its opportunities.
@@ -524,16 +582,10 @@
 
                 </div>
 
-
                 <div class="details-grid">
 
-                    <!-- REQUIRED SKILLS -->
-
                     <div class="details-card">
-
-                        <h3>
-                            Skills You Need
-                        </h3>
+                        <h3>Skills You Need</h3>
 
                         <p>
                             Build these skills to prepare for this career.
@@ -542,17 +594,10 @@
                         <ul id="detailSkills">
                             <li>Skills will appear here.</li>
                         </ul>
-
                     </div>
 
-
-                    <!-- LEARNING ROADMAP -->
-
                     <div class="details-card">
-
-                        <h3>
-                            Learning Roadmap
-                        </h3>
+                        <h3>Learning Roadmap</h3>
 
                         <p>
                             Follow these steps to get started.
@@ -561,17 +606,10 @@
                         <ol id="detailRoadmap">
                             <li>Your roadmap will appear here.</li>
                         </ol>
-
                     </div>
 
-
-                    <!-- LEARNING RESOURCES -->
-
                     <div class="details-card">
-
-                        <h3>
-                            Learning Resources
-                        </h3>
+                        <h3>Learning Resources</h3>
 
                         <p>
                             Use these resources to continue learning.
@@ -580,7 +618,6 @@
                         <ul id="detailResources">
                             <li>Resources will appear here.</li>
                         </ul>
-
                     </div>
 
                 </div>
@@ -593,24 +630,16 @@
 
         </section>
 
-
-        <!-- =======================================
-             CAREER ASSESSMENT
-        ======================================== -->
-
+        <!-- CAREER ASSESSMENT -->
         <section class="assessment section" id="assessment">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <p class="eyebrow">
-                        FIND YOUR DIRECTION
-                    </p>
+                    <p class="eyebrow">FIND YOUR DIRECTION</p>
 
-                    <h2>
-                        Discover Your Career Match
-                    </h2>
+                    <h2>Discover Your Career Match</h2>
 
                     <p>
                         Answer a few questions about your interests
@@ -619,105 +648,64 @@
 
                 </div>
 
-
                 <div class="assessment-card">
 
                     <form id="assessmentForm">
 
-                        <!-- QUESTION 1 -->
-
                         <div class="form-group">
-
                             <label for="interest">
                                 1. Which field interests you the most?
                             </label>
 
-                            <select
-                                id="interest"
-                                name="interest"
-                                required
-                            >
-
-                                <option value="">
-                                    Select your interest
-                                </option>
-
+                            <select id="interest" name="interest" required>
+                                <option value="">Select your interest</option>
                                 <option value="technology">
                                     Technology and Programming
                                 </option>
-
                                 <option value="robotics">
                                     Robotics and Artificial Intelligence
                                 </option>
-
                                 <option value="data">
                                     Data Science and Analytics
                                 </option>
-
                                 <option value="security">
                                     Cybersecurity
                                 </option>
-
                                 <option value="web">
                                     Web Development and Design
                                 </option>
-
                                 <option value="business">
                                     Business and Entrepreneurship
                                 </option>
-
                             </select>
-
                         </div>
 
-
-                        <!-- QUESTION 2 -->
-
                         <div class="form-group">
-
                             <label for="strength">
                                 2. What is your strongest skill?
                             </label>
 
-                            <select
-                                id="strength"
-                                name="strength"
-                                required
-                            >
-
-                                <option value="">
-                                    Select your strength
-                                </option>
-
+                            <select id="strength" name="strength" required>
+                                <option value="">Select your strength</option>
                                 <option value="analytical">
                                     Analytical Thinking
                                 </option>
-
                                 <option value="mathematics">
                                     Mathematics and Problem Solving
                                 </option>
-
                                 <option value="creative">
                                     Creativity and Design
                                 </option>
-
                                 <option value="technical">
                                     Technical Skills
                                 </option>
-
                                 <option value="communication">
                                     Communication and Leadership
                                 </option>
-
                             </select>
-
                         </div>
 
-
-                        <!-- QUESTION 3 -->
-
                         <div class="form-group">
-
                             <label for="experience">
                                 3. What is your current experience level?
                             </label>
@@ -727,27 +715,16 @@
                                 name="experience"
                                 required
                             >
-
                                 <option value="">
                                     Select your experience
                                 </option>
-
-                                <option value="beginner">
-                                    Beginner
-                                </option>
-
+                                <option value="beginner">Beginner</option>
                                 <option value="intermediate">
                                     Intermediate
                                 </option>
-
-                                <option value="advanced">
-                                    Advanced
-                                </option>
-
+                                <option value="advanced">Advanced</option>
                             </select>
-
                         </div>
-
 
                         <button
                             type="submit"
@@ -758,9 +735,7 @@
 
                     </form>
 
-
-                    <!-- ASSESSMENT RESULT -->
-
+                    <!-- Assessment result -->
                     <div
                         id="assessmentResult"
                         class="assessment-result"
@@ -768,9 +743,7 @@
                         hidden
                     >
 
-                        <p class="eyebrow">
-                            YOUR RESULT
-                        </p>
+                        <p class="eyebrow">YOUR RESULT</p>
 
                         <h3 id="resultTitle">
                             Your Recommended Career
@@ -795,15 +768,14 @@
 
         </section>
 
+        <!-- ABOUT SECTION -->
         <section class="about section" id="about">
 
             <div class="container about-container">
 
                 <div class="about-content">
 
-                    <p class="eyebrow">
-                        ABOUT CAREERPATHAI
-                    </p>
+                    <p class="eyebrow">ABOUT CAREERPATHAI</p>
 
                     <h2>
                         Make Your Next Career Decision With Confidence
@@ -836,9 +808,7 @@
                             🎯
                         </div>
 
-                        <h3>
-                            Your Goals. Your Journey.
-                        </h3>
+                        <h3>Your Goals. Your Journey.</h3>
 
                         <p>
                             Learn new skills, build projects, and
@@ -855,6 +825,7 @@
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
 
         <div class="container footer-container">
@@ -868,15 +839,10 @@
             </p>
 
             <div class="footer-links">
-
                 <a href="#home">Home</a>
-
                 <a href="#careers">Careers</a>
-
                 <a href="#assessment">Assessment</a>
-
                 <a href="#about">About</a>
-
             </div>
 
             <p class="copyright">
