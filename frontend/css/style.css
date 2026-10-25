@@ -2082,3 +2082,121 @@ video {
         transition: none;
     }
 }
+
+/* ==========================================
+   CAREER SECTION - CENTERED PROFESSIONAL LAYOUT
+   ========================================== */
+
+#careers {
+    width: 100%;
+    padding: 90px 5%;
+    box-sizing: border-box;
+}
+
+#careers > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Center the section heading and description */
+#careers h2 {
+    text-align: center;
+    margin: 12px auto 18px;
+}
+
+#careers > .container > p {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 28px;
+    line-height: 1.8;
+}
+
+/* Center the small section label */
+#careers .eyebrow,
+#careers .section-label {
+    display: block;
+    text-align: center;
+    margin: 0 auto 12px;
+}
+
+/* Center the search field */
+#careerSearch {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto 18px;
+}
+
+/* Center the category filters */
+#careers .filter-buttons,
+#careers .career-filters,
+#careers .filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto 20px;
+}
+
+/* Center the career count */
+#careers #careerCount,
+#careers #searchMessage,
+#careers .career-count {
+    text-align: center;
+    margin: 15px auto 25px;
+}
+
+/* Three-column responsive career grid */
+#careers .career-grid,
+#careers .careers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Consistent career card sizing */
+#careers .career-card {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 220px;
+    box-sizing: border-box;
+    padding: 26px;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    #careers .career-grid,
+    #careers .careers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    #careers {
+        padding: 60px 20px;
+    }
+
+    #careers .career-grid,
+    #careers .careers-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #careers .career-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    #careers h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+}
