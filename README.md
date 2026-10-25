@@ -21,3 +21,21 @@ Created the initial project structure with separate frontend and backend directo
 Started developing the user interface using HTML, CSS, and JavaScript.
 
 Goal: Establish the project foundation and define its main features.
+
+Day 2 — Frontend Development
+
+Developed the initial website interface.
+
+Created the navigation bar and homepage hero section.
+
+Added career cards to display different career options.
+
+Implemented career categories and filtering functionality.
+
+Added a search feature to help users find careers.
+
+Improved the layout and styling using CSS.
+
+Used JavaScript to make the frontend interactive.
+
+Goal: Build an interactive and user-friendly career exploration interface.
