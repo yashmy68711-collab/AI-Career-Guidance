@@ -70,13 +70,6 @@ Goal: Connect career recommendations with structured learning roadmaps so studen
     Explore recommended learning resources.
     Track completed roadmap stages using browser local storage.
 
-🛠️ Technologies Used
-Frontend
-
-    HTML5
-    CSS3
-    JavaScript
-
 🔌 Main API Endpoints
 Method	Endpoint	Purpose
 GET	/	Check the backend welcome endpoint
