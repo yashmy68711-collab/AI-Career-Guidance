@@ -77,13 +77,6 @@ Frontend
     CSS3
     JavaScript
 
-Backend
-
-    Python
-    FastAPI
-    Uvicorn
-    REST APIs
-
 🔌 Main API Endpoints
 Method	Endpoint	Purpose
 GET	/	Check the backend welcome endpoint
