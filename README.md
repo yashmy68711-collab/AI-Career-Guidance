@@ -84,13 +84,6 @@ Backend
     Uvicorn
     REST APIs
 
-Development Tools
-
-    Visual Studio Code
-    Git
-    GitHub
-    Ubuntu Linux
-
 🔌 Main API Endpoints
 Method	Endpoint	Purpose
 GET	/	Check the backend welcome endpoint
