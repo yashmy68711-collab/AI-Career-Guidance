@@ -122,9 +122,7 @@ Day 5 — Learning Academy and Topic-Level Learning
     Integrated the Academy with the existing FastAPI career endpoints.
     Added a career selection dropdown populated with career data from the backend.
     Organized career roadmaps into curriculum modules and individual learning topics.
-
     Added learning objectives for each topic.
-
     Created topic-specific subtopic outlines to support structured learning.
 
     Added generated study notes to help learners review important concepts.
@@ -134,15 +132,10 @@ Day 5 — Learning Academy and Topic-Level Learning
     Added YouTube search links for topics and subtopics.
 
     Implemented previous-topic and next-topic navigation.
-
     Added functionality to mark topics as completed or incomplete.
-
     Implemented browser local storage to preserve topic completion progress.
-
     Added a progress indicator showing the percentage of completed topics.
-
     Added a print option so learners can print their study notes or save them as PDF.
-
     Improved the Academy layout with responsive styling for different screen sizes.
 
 Goal: Extend CareerPathAI from a career exploration platform into a structured learning platform where students can explore curriculum topics, study concepts, practise skills, and track their learning progress.
