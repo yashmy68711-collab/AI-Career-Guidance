@@ -2200,3 +2200,792 @@ video {
         line-height: 1.3;
     }
 }
+
+/* =========================================================
+   CAREERPATHAI — LEARNING ACADEMY
+========================================================= */
+
+/* Academy section */
+
+.academy-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.academy-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+.academy-header {
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.academy-eyebrow {
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+}
+
+.academy-header h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+}
+
+.academy-header h2 span {
+    color: var(--primary);
+}
+
+.academy-header > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* Career selection controls */
+
+.academy-controls {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    max-width: 760px;
+    margin: 0 auto 24px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.academy-select-group {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 220px;
+}
+
+.academy-select-group label {
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.academy-controls select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+
+.academy-controls select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(137, 119, 255, 0.15);
+}
+
+/* Academy buttons */
+
+.academy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 12px 20px;
+    border: 1px solid var(--primary);
+    border-radius: 9px;
+    background: var(--primary);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.academy-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.academy-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+.academy-button-completed {
+    border-color: var(--success);
+    background: var(--success);
+    color: #071b16;
+}
+
+.academy-status {
+    min-height: 24px;
+    margin: 0 auto 24px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.academy-status.is-error {
+    color: #ff8585;
+}
+
+/* Career overview */
+
+.academy-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 340px);
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.academy-career-overview {
+    min-width: 0;
+}
+
+.academy-small-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.academy-career-overview h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.3;
+}
+
+.academy-career-overview p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* Learning progress */
+
+.academy-progress-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg);
+}
+
+.academy-progress-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.academy-progress-heading strong {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.academy-progress-track {
+    width: 100%;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--border);
+}
+
+.academy-progress-fill {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary);
+    transition: width 0.35s ease;
+}
+
+.academy-progress-card small {
+    display: block;
+    margin-top: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* Main curriculum layout */
+
+.academy-layout {
+    display: grid;
+    grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
+    gap: 26px;
+    align-items: start;
+}
+
+.academy-sidebar {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.academy-sidebar-heading {
+    margin-bottom: 22px;
+}
+
+.academy-sidebar-heading h3 {
+    margin: 0 0 9px;
+    color: var(--text);
+    font-size: 1.3rem;
+}
+
+.academy-sidebar-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+#academyModuleList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Individual module buttons */
+
+.academy-module-button {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.academy-module-button:hover {
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.academy-module-button.active {
+    border-color: var(--primary);
+    background: rgba(137, 119, 255, 0.12);
+}
+
+.academy-module-number {
+    display: inline-flex;
+    flex: 0 0 36px;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: rgba(137, 119, 255, 0.14);
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.academy-module-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.academy-module-info strong {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.academy-module-info small {
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+/* Lesson content panel */
+
+.academy-main {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.academy-lesson {
+    min-width: 0;
+}
+
+.academy-lesson-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.academy-lesson h2 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.academy-lesson-intro {
+    margin: 0 0 30px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.academy-lesson-section {
+    margin: 28px 0;
+}
+
+.academy-lesson-section h3,
+.academy-notes h3 {
+    margin: 0 0 16px;
+    color: var(--text);
+    font-size: 1.15rem;
+}
+
+/* Learning objectives, subtopics and practice */
+
+.academy-objectives,
+.academy-subtopics,
+.academy-practice {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.academy-objectives li,
+.academy-subtopics li,
+.academy-practice li {
+    position: relative;
+    padding: 13px 15px 13px 38px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.academy-objectives li::before {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    content: "✓";
+    color: var(--success);
+    font-weight: 700;
+}
+
+.academy-subtopics li::before {
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    content: "•";
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.academy-practice li::before {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    content: "↗";
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Study notes */
+
+.academy-notes {
+    margin: 28px 0;
+    padding: 23px;
+    border: 1px solid rgba(137, 119, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(137, 119, 255, 0.07);
+}
+
+.academy-notes-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.academy-notes-heading > span {
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.academy-notes h3 {
+    margin-bottom: 0;
+}
+
+.academy-notes p {
+    margin: 17px 0 0;
+    color: var(--text);
+    line-height: 1.9;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* YouTube tutorial and resource links */
+
+.academy-video-list {
+    display: grid;
+    gap: 10px;
+}
+
+.academy-video-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--bg);
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.academy-video-link:hover {
+    border-color: var(--primary);
+    background: rgba(137, 119, 255, 0.08);
+    color: var(--text);
+}
+
+.academy-video-link > span:first-child {
+    flex: 0 0 auto;
+    color: var(--primary);
+}
+
+.academy-video-link > span:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+}
+
+.academy-video-link > span:last-child {
+    flex: 0 0 auto;
+    color: var(--muted);
+}
+
+.academy-muted {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+/* Lesson action buttons */
+
+.academy-lesson-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.academy-print-button {
+    border-color: var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+.academy-print-button:hover {
+    border-color: var(--primary);
+    background: rgba(137, 119, 255, 0.08);
+}
+
+/* Previous and next topic navigation */
+
+.academy-topic-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.academy-topic-navigation > span {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.academy-navigation-button {
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.academy-navigation-button:hover:not(:disabled) {
+    border-color: var(--primary);
+}
+
+.academy-navigation-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+/* Empty states and footer note */
+
+.academy-empty {
+    padding: 35px 18px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.8;
+}
+
+.academy-empty h3 {
+    margin-top: 0;
+    color: var(--text);
+}
+
+.academy-footer-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 800px;
+    margin: 30px auto 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+.academy-footer-note > span {
+    color: var(--primary);
+}
+
+.academy-footer-note p {
+    margin: 0;
+}
+
+/* Ensure hidden content remains hidden */
+
+#academyContent[hidden] {
+    display: none !important;
+}
+
+/* Tablet responsiveness */
+
+@media (max-width: 900px) {
+    .academy-section {
+        padding: 75px 0;
+    }
+
+    .academy-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .academy-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #academyModuleList {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 600px) {
+    .academy-section {
+        padding: 55px 0;
+    }
+
+    .academy-header {
+        margin-bottom: 28px;
+    }
+
+    .academy-controls {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .academy-select-group {
+        min-width: 0;
+    }
+
+    .academy-controls .academy-button {
+        width: 100%;
+    }
+
+    .academy-overview {
+        gap: 20px;
+        padding: 19px;
+    }
+
+    .academy-progress-card {
+        padding: 17px;
+    }
+
+    #academyModuleList {
+        grid-template-columns: 1fr;
+    }
+
+    .academy-sidebar,
+    .academy-main {
+        padding: 18px;
+    }
+
+    .academy-lesson-actions {
+        flex-direction: column;
+    }
+
+    .academy-lesson-actions .academy-button {
+        width: 100%;
+    }
+
+    .academy-topic-navigation {
+        flex-wrap: wrap;
+    }
+
+    .academy-topic-navigation > span {
+        order: -1;
+        width: 100%;
+    }
+
+    .academy-navigation-button {
+        flex: 1;
+    }
+
+    .academy-footer-note {
+        padding: 0 5px;
+    }
+}
+
+/* Print or save lesson notes as PDF */
+
+@media print {
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .navbar,
+    .footer,
+    .academy-header,
+    .academy-controls,
+    .academy-status,
+    .academy-sidebar,
+    .academy-lesson-actions,
+    .academy-topic-navigation,
+    .academy-footer-note {
+        display: none !important;
+    }
+
+    .academy-section {
+        padding: 0 !important;
+    }
+
+    .academy-container {
+        width: 100% !important;
+    }
+
+    #academyContent[hidden] {
+        display: block !important;
+    }
+
+    .academy-overview,
+    .academy-main,
+    .academy-notes,
+    .academy-progress-card,
+    .academy-objectives li,
+    .academy-subtopics li,
+    .academy-practice li,
+    .academy-video-link {
+        border: 1px solid #cccccc !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        break-inside: avoid;
+    }
+
+    .academy-career-overview h3,
+    .academy-lesson h2,
+    .academy-lesson-section h3,
+    .academy-notes h3,
+    .academy-objectives li,
+    .academy-subtopics li,
+    .academy-practice li {
+        color: #000000 !important;
+    }
+
+    .academy-lesson {
+        break-inside: auto;
+    }
+
+    .academy-lesson-section,
+    .academy-notes {
+        break-inside: avoid;
+    }
+
+    .academy-video-link {
+        text-decoration: none !important;
+    }
+}
+
+/* =========================================================
+   END CAREERPATHAI LEARNING ACADEMY
+========================================================= */

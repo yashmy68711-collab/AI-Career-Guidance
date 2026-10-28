@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/academy.js" defer></script>
 
     <!-- Navbar and hero layout fixes -->
     <style>
@@ -192,6 +193,7 @@
                 <a href="#home">Home</a>
                 <a href="#careers">Explore Careers</a>
                 <a href="#assessment">Career Assessment</a>
+                <a href="#learning-academy">Learning Academy</a>
                 <a href="#about">About</a>
             </nav>
 
@@ -659,21 +661,27 @@
 
                             <select id="interest" name="interest" required>
                                 <option value="">Select your interest</option>
+
                                 <option value="technology">
                                     Technology and Programming
                                 </option>
+
                                 <option value="robotics">
                                     Robotics and Artificial Intelligence
                                 </option>
+
                                 <option value="data">
                                     Data Science and Analytics
                                 </option>
+
                                 <option value="security">
                                     Cybersecurity
                                 </option>
+
                                 <option value="web">
                                     Web Development and Design
                                 </option>
+
                                 <option value="business">
                                     Business and Entrepreneurship
                                 </option>
@@ -687,18 +695,23 @@
 
                             <select id="strength" name="strength" required>
                                 <option value="">Select your strength</option>
+
                                 <option value="analytical">
                                     Analytical Thinking
                                 </option>
+
                                 <option value="mathematics">
                                     Mathematics and Problem Solving
                                 </option>
+
                                 <option value="creative">
                                     Creativity and Design
                                 </option>
+
                                 <option value="technical">
                                     Technical Skills
                                 </option>
+
                                 <option value="communication">
                                     Communication and Leadership
                                 </option>
@@ -718,10 +731,13 @@
                                 <option value="">
                                     Select your experience
                                 </option>
+
                                 <option value="beginner">Beginner</option>
+
                                 <option value="intermediate">
                                     Intermediate
                                 </option>
+
                                 <option value="advanced">Advanced</option>
                             </select>
                         </div>
@@ -767,6 +783,192 @@
             </div>
 
         </section>
+
+        <!-- ==========================================
+             LEARNING ACADEMY SECTION
+        =========================================== -->
+        <section class="academy-section section" id="learning-academy">
+
+            <div class="container academy-container">
+
+                <!-- Academy heading -->
+                <div class="academy-header">
+
+                    <p class="eyebrow academy-eyebrow">
+                        CAREERPATHAI LEARNING ACADEMY
+                    </p>
+
+                    <h2>
+                        Learn Skills.
+                        <span>Build Your Future.</span>
+                    </h2>
+
+                    <p>
+                        Follow a structured learning roadmap for your chosen
+                        career. Explore curriculum modules, study topics,
+                        practise concepts, discover YouTube tutorials, and
+                        track your learning progress.
+                    </p>
+
+                </div>
+
+                <!-- Career selection -->
+                <div class="academy-controls">
+
+                    <div class="academy-select-group">
+
+                        <label for="academyCareer">
+                            Choose your career
+                        </label>
+
+                        <select
+                            id="academyCareer"
+                            aria-label="Choose your career"
+                        >
+                            <option value="robotics">
+                                AI &amp; Robotics Engineer
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="loadCurriculum"
+                        class="academy-button"
+                    >
+                        Explore Curriculum
+                    </button>
+
+                </div>
+
+                <!-- Loading and error messages -->
+                <p
+                    id="academyStatus"
+                    class="academy-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+                <!-- Curriculum content -->
+                <div id="academyContent" hidden>
+
+                    <!-- Career overview and progress -->
+                    <div class="academy-overview">
+
+                        <div class="academy-career-overview">
+
+                            <span class="academy-small-label">
+                                SELECTED CAREER
+                            </span>
+
+                            <h3 id="academyCareerTitle"></h3>
+
+                            <p id="academyDescription"></p>
+
+                        </div>
+
+                        <!-- Progress card -->
+                        <div class="academy-progress-card">
+
+                            <div class="academy-progress-heading">
+
+                                <span>Learning Progress</span>
+
+                                <strong id="academyProgressText">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="academy-progress-track">
+
+                                <div
+                                    id="academyProgressBar"
+                                    class="academy-progress-fill"
+                                ></div>
+
+                            </div>
+
+                            <small id="academyProgressDetails">
+                                0 topics completed
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Course layout -->
+                    <div class="academy-layout">
+
+                        <!-- Module sidebar -->
+                        <aside class="academy-sidebar">
+
+                            <div class="academy-sidebar-heading">
+
+                                <span class="academy-small-label">
+                                    YOUR LEARNING PATH
+                                </span>
+
+                                <h3>Course Curriculum</h3>
+
+                                <p>
+                                    Select a module to explore its topics.
+                                </p>
+
+                            </div>
+
+                            <div id="academyModuleList">
+
+                                <div class="academy-empty">
+                                    Loading curriculum modules...
+                                </div>
+
+                            </div>
+
+                        </aside>
+
+                        <!-- Main lesson content -->
+                        <div class="academy-main">
+
+                            <div id="academyModuleContent">
+
+                                <div class="academy-empty">
+
+                                    <h3>Ready to start learning?</h3>
+
+                                    <p>
+                                        Select a module from the curriculum
+                                        to explore your first topic.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Academy information -->
+                <div class="academy-footer-note">
+
+                    <span aria-hidden="true">✦</span>
+
+                    <p>
+                        Your learning progress is saved in your browser.
+                        Study notes are generated learning prompts, and
+                        tutorial links open YouTube search results.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- END LEARNING ACADEMY SECTION -->
 
         <!-- ABOUT SECTION -->
         <section class="about section" id="about">
@@ -839,10 +1041,13 @@
             </p>
 
             <div class="footer-links">
+
                 <a href="#home">Home</a>
                 <a href="#careers">Careers</a>
                 <a href="#assessment">Assessment</a>
+                <a href="#learning-academy">Learning Academy</a>
                 <a href="#about">About</a>
+
             </div>
 
             <p class="copyright">
