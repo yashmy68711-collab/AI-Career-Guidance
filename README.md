@@ -112,8 +112,6 @@ Frontend URL: http://127.0.0.1:5500
     Improve the user interface and mobile responsiveness.
     Deploy the application so users can access it online.
 
-📌 Project Status
-
 Current Stage: Day 4 — Career recommendations and detailed learning roadmaps.
 
 Day 5 — Learning Academy and Topic-Level Learning
@@ -124,13 +122,9 @@ Day 5 — Learning Academy and Topic-Level Learning
     Organized career roadmaps into curriculum modules and individual learning topics.
     Added learning objectives for each topic.
     Created topic-specific subtopic outlines to support structured learning.
-
     Added generated study notes to help learners review important concepts.
-
     Included practice tasks to encourage hands-on learning.
-
     Added YouTube search links for topics and subtopics.
-
     Implemented previous-topic and next-topic navigation.
     Added functionality to mark topics as completed or incomplete.
     Implemented browser local storage to preserve topic completion progress.
