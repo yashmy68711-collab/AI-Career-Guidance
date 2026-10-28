@@ -102,16 +102,6 @@ Frontend URL: http://127.0.0.1:5500
     Open a career to view its skills and learning roadmap.
     Complete the career assessment to see the recommendation.
 
-🔮 Future Improvements
-
-    Integrate AI or machine learning for more personalized career recommendations.
-    Add user accounts and authentication.
-    Save learning progress to a database.
-    Add quizzes and skill assessments.
-    Recommend courses based on each student's skill level.
-    Improve the user interface and mobile responsiveness.
-    Deploy the application so users can access it online.
-
 Current Stage: Day 4 — Career recommendations and detailed learning roadmaps.
 
 Day 5 — Learning Academy and Topic-Level Learning
