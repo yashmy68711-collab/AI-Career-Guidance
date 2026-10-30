@@ -57,53 +57,6 @@ Day 4 — Career Recommendation and Learning Roadmaps
     Added roadmap stage checkboxes and local storage support for tracking completed stages.
     Improved the assessment results section to display the recommended career and its learning roadmap.
 
-Goal: Connect career recommendations with structured learning roadmaps so students can understand what to learn and track their progress.
-✨ Key Features
-
-    Explore six different career paths.
-    Search for careers by name.
-    Filter careers by category.
-    View career descriptions and required skills.
-    Receive career recommendations based on interests and strengths.
-    Access structured learning roadmaps.
-    View estimated roadmap durations and learning goals.
-    Explore recommended learning resources.
-    Track completed roadmap stages using browser local storage.
-
-🔌 Main API Endpoints
-Method	Endpoint	Purpose
-GET	/	Check the backend welcome endpoint
-GET	/health	Check backend health
-GET	/api/careers	Retrieve all career options
-GET	/api/careers/{career_id}	Retrieve details for a specific career
-POST	/api/recommend	Generate a career recommendation
-▶️ Running the Project
-1. Start the Backend
-
-From the project root directory, run:
-
-python3 -m uvicorn backend.main:app --reload
-
-Backend URL: http://127.0.0.1:8000
-
-Interactive API documentation: http://127.0.0.1:8000/docs
-2. Start the Frontend
-
-Open a second terminal and run:
-
-python3 -m http.server 5500 --directory frontend
-
-Frontend URL: http://127.0.0.1:5500
-3. Test the Application
-
-    Open the frontend in your browser.
-    Explore the available career options.
-    Try the career search and category filters.
-    Open a career to view its skills and learning roadmap.
-    Complete the career assessment to see the recommendation.
-
-Current Stage: Day 4 — Career recommendations and detailed learning roadmaps.
-
 Day 5 — Learning Academy and Topic-Level Learning
 
     Added a dedicated Learning Academy section to the frontend.
@@ -122,8 +75,174 @@ Day 5 — Learning Academy and Topic-Level Learning
     Added a print option so learners can print their study notes or save them as PDF.
     Improved the Academy layout with responsive styling for different screen sizes.
 
-
-
 Note: Study notes are generated learning prompts rather than complete textbook chapters. Tutorial links open YouTube search results; individual videos are not automatically verified.
-
 The project currently uses a rules-based recommendation system. AI/ML-based recommendations and other advanced features are potential future improvements.
+
+Day 6 — Learning Academy and Assessment System
+
+CareerPathAI currently includes:
+Career exploration across six career paths.
+Rules-based career recommendations.
+Structured learning roadmaps.
+Topic-level Learning Academy.
+Generated study notes and practice tasks.
+Topic-wise and subtopic-wise MCQ assessments.
+Automatic evaluation, scoring, and answer explanations.
+Browser-based learning progress and quiz-result storage.
+The project currently uses a rules-based recommendation system and a frontend-based assessment engine. AI/ML integration, database-backed progress tracking, and more advanced assessment features are planned for future development.
+
+✨ Key Features
+1. Career Exploration
+    Explore six different career paths.
+    Search for careers by name.
+    Filter careers by category.
+    View career descriptions and required skills.
+
+2. Career Assessment
+    Receive career recommendations based on interests and strengths.
+    View recommended careers and their learning roadmaps.
+
+3. Learning Roadmaps
+
+    Access structured learning roadmaps for different careers.
+    View roadmap stages, topics, estimated durations, and completion goals.
+    Explore recommended learning resources.
+    Track completed roadmap stages using browser local storage.
+
+4. Learning Academy
+
+    Select a career and load its curriculum from the backend.
+    Browse curriculum modules and learning topics.
+    Review learning objectives and subtopic outlines.
+    Access study notes and practice tasks.
+    Open YouTube tutorial searches.
+    Navigate between learning topics.
+    Mark topics as completed or incomplete.
+    Track learning progress through a percentage indicator.
+    Print study notes or save them as PDF.
+    Preserve topic completion progress using browser local storage.
+
+5. Assessment System
+
+    Topic-wise MCQ assessments.
+    Subtopic-wise MCQ assessments.
+    Multiple-choice question navigation.
+    Automatic answer evaluation.
+    Instant score calculation.
+    70% passing threshold.
+    Pass and retake functionality.
+    Correct-answer review.
+    Explanations for answers.
+    Save assessment results using browser local storage.
+
+   🛠️ Technology Stack
+
+Frontend
+
+HTML5
+CSS3
+JavaScript
+
+Backend
+
+Python
+FastAPI
+Data and Progress Management
+Backend-managed career and roadmap data.
+JavaScript-based quiz question bank.
+Browser local storage for learning progress and quiz results.
+
+📁 Main Project Structure
+
+Project_career-guidance/
+│
+├── backend/
+│   └── main.py
+│
+├── frontend/
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   ├── script.js
+│   │   ├── academy.js
+│   │   ├── quiz-data.js
+│   │   └── quiz.js
+│   │
+│   └── index.html
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+
+🔌 Main API Endpoints
+
+Method
+Endpoint
+Purpose
+GET
+/
+
+Backend welcome endpoint
+GET
+/health
+Check backend health
+
+GET
+/api/careers
+Retrieve all available careers
+
+GET
+/api/careers/{career_id}
+Retrieve details and roadmap for a career
+
+POST
+/api/recommend
+Generate a career recommendation
+The Learning Academy uses the existing career endpoints to retrieve career information and roadmap topics.
+The quiz system currently runs on the frontend using its JavaScript question bank.
+
+▶️ Running the Project
+
+1. Clone the Repository
+
+git clone https://github.com/yashmy68711-collab/AI-Career-Guidance.git
+cd Project_career-guidance
+
+2. Activate the Virtual Environment
+
+source .venv/bin/activate
+If the virtual environment does not exist, create it:
+python3 -m venv .venv
+source .venv/bin/activate
+
+3. Install Dependencies
+
+pip install -r requirements.txt
+
+4. Start the Backend
+
+python3 -m uvicorn backend.main:app --reload
+Backend URL: http://127.0.0.1:8000
+Interactive API documentation: http://127.0.0.1:8000/docs
+
+5. Start the Frontend
+
+Open a second terminal:
+python3 -m http.server 5500 --directory frontend
+Frontend URL: http://127.0.0.1:5500
+
+6. Test the Application
+
+Open CareerPathAI in your browser.
+Explore the available career options.
+Try the career search and category filters.
+Open a career to view its skills and learning roadmap.
+Complete the career assessment.
+Open the Learning Academy.
+Select a career and explore its curriculum.
+Read topic notes and explore subtopics.
+Attempt topic-wise and subtopic-wise MCQ tests.
+Submit assessments and review scores and explanations.
+Retake assessments and check saved results.
