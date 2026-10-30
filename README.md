@@ -122,7 +122,7 @@ Day 5 — Learning Academy and Topic-Level Learning
     Added a print option so learners can print their study notes or save them as PDF.
     Improved the Academy layout with responsive styling for different screen sizes.
 
-Goal: Extend CareerPathAI from a career exploration platform into a structured learning platform where students can explore curriculum topics, study concepts, practise skills, and track their learning progress.
+
 
 Note: Study notes are generated learning prompts rather than complete textbook chapters. Tutorial links open YouTube search results; individual videos are not automatically verified.
 
