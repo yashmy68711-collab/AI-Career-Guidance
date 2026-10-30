@@ -1356,3 +1356,16 @@
     }
 
 })();
+
+/* Notify the quiz system that a new lesson has loaded. */
+
+document.dispatchEvent(
+    new CustomEvent("academy:lesson-loaded", {
+        detail: {
+            careerId: state.career.id,
+            career: state.career,
+            module: module,
+            topic: topic
+        }
+    })
+);
