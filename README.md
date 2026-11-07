@@ -245,4 +245,4 @@ Select a career and explore its curriculum.
 Read topic notes and explore subtopics.
 Attempt topic-wise and subtopic-wise MCQ tests.
 Submit assessments and review scores and explanations.
-Retake assessments and check saved results.
+
