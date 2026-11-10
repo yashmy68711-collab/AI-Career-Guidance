@@ -1761,4 +1761,18 @@ def get_curricula():
         "careers": careers,
     }
 
+@router.get("/{career_id}")
+def get_curriculum(career_id: str):
+    """Return a complete curriculum for one career."""
+    curriculum = CURRICULUM.get(career_id.lower())
 
+    if curriculum is None:
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Curriculum '{career_id}' was not found. "
+                f"Available careers: {', '.join(CURRICULUM.keys())}"
+            ),
+        )
+
+    return add_video_links(curriculum)
